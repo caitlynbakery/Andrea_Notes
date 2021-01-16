@@ -6,6 +6,12 @@
 
 When declaring a variable, we can assign it to a value using the equals sign. Declaration is calling the variable type and name. 
 
+This is initilization :) 
+
+```
+String name = "Caitlyn";
+```
+
 ### Logical & Relational operators
 
 logical operators compare between expressions and return a boolean value. 
