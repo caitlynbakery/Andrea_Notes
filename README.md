@@ -57,6 +57,7 @@ int b = a++;
 ```
 
 ++x is a prefix increment operator which means that x is incremented first. Then, y is assigned to x.
+
 a++ is a postfix increment operator which means that b returns the value of z before z is incremented. 
 
 ### Hex Format
@@ -78,7 +79,9 @@ print('\$$a')
 
 ### Finding & Replacing Strings
 
-There are different functions that we can use to alter strings. FOr example, we can use the contains() method to check to see if a String contains another String.
+There are different functions that we can use to alter strings. 
+
+For example, we can use the contains() method to check to see if a String contains another String.
 
 ```
 String lovePizza = "I love pizza"
@@ -87,13 +90,13 @@ print(lovePizza.contains('pizza'));
 // returns true
 ```
 
-The method replaceAll() could replace 'pizza' with 'pasta'.
+The method replaceAll() replaces 'pizza' with 'pasta'.
 
 ```
 String lovePizza = "I love pizza"
 print(lovePizza.replaceAll('pizza', 'pasta')
 
-// print: I love pasta
+// prints: I love pasta
 ```
 
 ## Dart Type System
