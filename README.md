@@ -12,11 +12,11 @@ logical operators compare between expressions and return a boolean value.
 Examples of logical operators include: 
 
 ```
-  * ==
-  * !=
-  * >=
-  * >
-  * <=
+   ==
+   !=
+   >=
+   >
+   <=
  ```
  
 relational operators compare logical operators.
