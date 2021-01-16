@@ -12,6 +12,18 @@ This is initilization :)
 String name = "Caitlyn";
 ```
 
+This is declaration
+
+```
+String cake
+```
+
+This is assignment
+
+```
+cake = "Strawberry"; 
+```
+
 ### Logical & Relational operators
 
 logical operators compare between expressions and return a boolean value. 
