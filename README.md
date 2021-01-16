@@ -53,17 +53,23 @@ int y = ++x;
 int z = 1;
 int b = a++;
 
-// a = 2, b = 1
+// z = 2, b = 1
 ```
 
 ++x is a prefix increment operator which means that x is incremented first. Then, y is assigned to x.
 
-a++ is a postfix increment operator which means that b returns the value of z before z is incremented. 
+z++ is a postfix increment operator which means that b returns the value of z before z is incremented. 
 
 ### Hex Format
-Dart uses the base16 notation which is digits from 0 to 9 and letters from A to F.
-example: 
-OxA = 10
+Dart uses the base16 notation which is digits from 0 to 9 and letters from A to F. Hex numbers are used to define colors in ARGB format. 
+
+example for the color green: 
+
+```
+int green = 0xFF00FF00;
+```
+
+In the color green, the first set of FF represents the alpha channel, 00 represents red color, FF represents green color and 00 represents the blue color. 
 
 ### String escaping
 To escape a symbol in Dart, we use the `\` symbol. 
