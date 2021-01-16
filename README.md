@@ -73,8 +73,29 @@ print('$a')
 print('\$a')
 print('\$$a')
 
-\\ prints: 10, $a, $10 
+// prints: 10, $a, $10 
 ```
+
+### Finding & Replacing Strings
+
+There are different functions that we can use to alter strings. FOr example, we can use the contains() method to check to see if a String contains another String.
+
+```
+String lovePizza = "I love pizza"
+print(lovePizza.contains('pizza'));
+
+// returns true
+```
+
+The method replaceAll() could replace 'pizza' with 'pasta'.
+
+```
+String lovePizza = "I love pizza"
+print(lovePizza.replaceAll('pizza', 'pasta')
+
+// print: I love pasta
+```
+
 ## Dart Type System
 
 ### final vs. const
