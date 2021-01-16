@@ -10,12 +10,15 @@ When declaring a variable, we can assign it to a value using the equals sign. De
 
 logical operators compare between expressions and return a boolean value. 
 Examples of logical operators include: 
+
+```
   * ==
   * !=
   * >=
   * >
   * <=
-  
+ ```
+ 
 relational operators compare logical operators.
 Examples of relational operators include:
   * ||
