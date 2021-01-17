@@ -119,3 +119,11 @@ String multiplication concatenates a string a number of times. You can't multipl
 For example, 'x' * 2 equals 'xx'. 
 
 'x' * 3 equals 'xxx'. 
+
+### Modulo Operator
+The modulo operator returns the remainder of a division equation and can be used to find an odd or even number.
+
+```
+5 % 3 // equals 2
+10 % 2 // equals 0 
+```
