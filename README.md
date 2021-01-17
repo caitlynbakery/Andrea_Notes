@@ -111,5 +111,11 @@ print(lovePizza.replaceAll('pizza', 'pasta')
 
 final keyword is a run-time constant and can only be set once. Contrastly, the const keyword is a compile-time constant and needs to be used with compile-time functions. It is best to use const > final > var to make an efficient code.
 
+## Control Flow
 
+### String multiplication
+String multiplication concatenates a string a number of times. You can't multiply 'x' * 'x'. 
 
+For example, 'x' * 2 equals 'xx'. 
+
+'x' * 3 equals 'xxx'. 
