@@ -158,3 +158,21 @@ const pos = 'second';
       break;
 ```
 
+### Enum 
+The enum type can be used to define values and organize the code. I first declare the values of an enum inside curly brackets. Then, I can access enum values inside my code by calling the name and value. 
+
+In my example, the enum type is called Operation.
+
+```dart
+enum Operation {plus, minus, multiply, divide}
+
+void main() {
+  const a = 7;
+  const b = 2;
+  const op = Operation.multiply;
+  
+  switch(op){
+    case Operation.plus:
+      print('$a + $b = ${a + b}');
+      break;
+```
