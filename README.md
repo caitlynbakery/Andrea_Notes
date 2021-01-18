@@ -131,7 +131,7 @@ The modulo operator returns the remainder of a division equation and can be used
 ### Break & Continue
 The break and continue keywords can be used to alter the flow inside for/while loops. The break keyword exists the loop's function and runs the next section of code. Contrastly, the continue keyword keeps the loop running.
 
-```
+```dart
  for(var i = 1; i <= 16; i++){
     if((i % 3 == 0) && (i % 5 == 0)) {
     print('fuzz buzz');
@@ -142,3 +142,19 @@ The break and continue keywords can be used to alter the flow inside for/while l
     continue;
     }
 ```
+
+### Switch Statements
+The switch statement can be used in place of if/else statements. I use the switch function with multiple cases to control the behavior. At the end of each case, I write the break statement. The default statement runs when all the other cases are false. 
+
+```dart
+const pos = 'second';
+  
+  switch (pos) {
+    case 'first':
+      print('gold');
+      break;
+    default:
+      print('no medal');
+      break;
+```
+
