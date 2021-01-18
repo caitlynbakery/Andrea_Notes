@@ -127,3 +127,18 @@ The modulo operator returns the remainder of a division equation and can be used
 5 % 3 // equals 2
 10 % 2 // equals 0 
 ```
+
+### Break & Continue
+The break and continue keywords can be used to alter the flow inside for/while loops. The break keyword exists the loop's function and runs the next section of code. Contrastly, the continue keyword keeps the loop running.
+
+```
+ for(var i = 1; i <= 16; i++){
+    if((i % 3 == 0) && (i % 5 == 0)) {
+    print('fuzz buzz');
+      break;
+    } 
+     if (i % 3 == 0){
+    print ('fuzz');
+    continue;
+    }
+```
