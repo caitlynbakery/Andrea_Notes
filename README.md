@@ -207,3 +207,20 @@ final rng = Random();
 ...
 final random = rng.nextInt(3);
 ```
+
+## Lists
+
+### Iteration through List
+
+This is an example of how to iterate through a list and add all the numbers together. 
+
+```dart
+var numbers = [1, 3, 5, 7, 9];
+  var sum = 0;
+  
+  for(var number in numbers){
+    sum = sum + number;
+    
+  }
+  print(sum);
+```
