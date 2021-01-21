@@ -208,7 +208,7 @@ final rng = Random();
 final random = rng.nextInt(3);
 ```
 
-## Lists
+## Collections
 
 ### Iteration through List
 
@@ -223,4 +223,33 @@ var numbers = [1, 3, 5, 7, 9];
     
   }
   print(sum);
+```
+
+### Sets
+
+Sets are very similar to lists because they both hold a collection of items. However, sets can only contain unique items and have specific functions.
+
+The union() function combines the two sets together, but only repeats `Mali` once.
+
+The intersection() function finds the country that both sets share which is `Mali`.
+
+Lastly, the difference() function finds the countries in africanCountries that differ from asianCountries. 
+
+```dart
+var asianCountries = {'Japan', 'South Korea', 'Mali'};
+  var africanCountries = {'Nigeria', 'South Africa', 'Mali'};
+  print(africanCountries.union(asianCountries));
+ print(africanCountries.intersection(asianCountries));
+  print(africanCountries.difference(asianCountries));
+```
+
+The for in loop can be used to add all the values in a set together.
+
+```dart
+var sum = 0;
+  for(var value in d){
+    sum += value;
+  }
+  print(sum);
+  
 ```
