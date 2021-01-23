@@ -253,3 +253,21 @@ var sum = 0;
   print(sum);
   
 ```
+
+### Collection-if
+
+The collection-if statement inside of a list runs an if statement and can add more items to the list. 
+
+```dart
+final colors2 = [
+    'grey',
+    'brown',
+    if (addBlue)
+      'blue',
+    if (addRed)
+      'red',]
+```
+
+### Spreads
+
+The spread operator uses `...` to add elements of a list to the enclosing list/collection.
