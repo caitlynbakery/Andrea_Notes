@@ -270,4 +270,18 @@ final colors2 = [
 
 ### Spreads
 
-The spread operator uses `...` to add elements of a list to the enclosing list/collection.
+The spread operator uses `...` to add elements of a list to the enclosing list/collection. The spread operator can be used inside of a list to add additional items.
+
+The example below shows a collection-if statement being used in conjuction with the spread operator. The ratings list and the item `isPopular` is added to restaurant if the predicate returns true.
+
+```dart
+ const ratings = [4.0, 4.5, 3.5];
+  final restaurant = {
+    'name': 'Pizza Mario',
+    'cuisine': 'Italian',
+    if (ratings.length > 3) ...{
+      'ratings': ratings,
+      'isPopular': true,
+    }
+```
+
