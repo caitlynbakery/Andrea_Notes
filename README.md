@@ -11,3 +11,5 @@
 * [Collections](collections.md)
 
 * [Null Safety](null_safety.md)
+
+* [Basic Functions](basic_functions.md)

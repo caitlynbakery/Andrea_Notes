@@ -48,3 +48,42 @@ int x = -2;
   int value = maybeValue!;
   print(value);
 ```
+
+### If-null operator
+
+The if-null operator can replace a ternary operator. In the example below, if maybeValue is not null, then maybeValue is assigned to value. If maybeValue is null, then value equals 0. We should use the `??` operator when there's a default value.
+
+```dart
+int x = -1;
+int? maybeValue;
+if(x > 0){
+  maybeValue = x;
+}
+int value = maybeValue ?? 0;
+```
+
+Another operator is the augmented assignment if-null operator. This operator assigns maybeValue to 0 if it is null. 
+
+```dart
+maybeValue ??= 0;
+```
+
+### Null Safety with Collections
+
+A null value can be added to a list of Strings by adding a question mark to the type. The question mark makes the type nullable.
+
+```dart
+const cities = <String?>['London', 'Paris', null];
+```
+
+### Conditional Access Operator
+
+This operator prevents a method from running on a null value. It is represented by a ? after the variable name.
+
+```dart
+for (var city in cities){
+  print(city?.toUpperCase());
+}
+```
+
+In the example above, the `toUpperCase` method only runs when the variable `city` is not null. 
