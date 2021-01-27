@@ -12,4 +12,4 @@ Topics to Learn:
 
 Function arguments are the value of the variables that are passed to the function. Parameters are the variables defined at function declaration.
 
-![parameters img](http://getkt.com/wp-content/uploads/2019/05/Parameters-vs-Arguments.jpg)
+<img src="http://getkt.com/wp-content/uploads/2019/05/Parameters-vs-Arguments.jpg" width=50%>
