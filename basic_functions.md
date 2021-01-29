@@ -61,3 +61,14 @@ void main(){
 Global mutable state can lead to bugs and issues that cost a lot of time to fix. 
 
 A side effect is when a variable is modified outside of its scope. The side effect is really bad because you don't want to change the variable in another scope!
+
+```dart
+var counter = 1;
+
+void main() {
+    counter++;
+    counter++;
+}
+```
+
+In the example above, the global variable counter is being modified which we should avoid. 
