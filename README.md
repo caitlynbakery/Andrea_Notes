@@ -13,3 +13,5 @@
 * [Null Safety](null_safety.md)
 
 * [Basic Functions](basic_functions.md)
+
+* [Functions 2](functions2.md)
