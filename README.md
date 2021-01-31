@@ -14,4 +14,4 @@
 
 * [Basic Functions](basic_functions.md)
 
-* [Functions 2](functions2.md)
+* [Advanced Functions](advanced_functions.md)
