@@ -78,3 +78,56 @@ List<R> transform<T, R>(List<T> items, R Function(T) f) {
   return result;
 }
  ```
+
+ ### where and firstWhere function
+
+ The where and firstWhere functions are used to filter and find items inside a collection. They take in an anonymous function that returns a boolean. This function is called a predicate. 
+
+ ```dart
+  const list = [1,2,3,4];
+  final even = list.where((value) => value % 2 == 0); 
+  print(even);
+  final value = list.firstWhere((x) => x == 4, orElse: () => -1);
+ ```
+
+ ### where function exercise
+
+ In this exercise, I created my own where function that utilizes generic type and returns a generic typed list. My where function first accepts a generic typed list called values and a function called equation. It then runs the equation on every value in my list and adds the value to a empty list. I can call the where function by passing in a list and an anonymous function. 
+
+ ```dart
+void main() {
+ var numbers = [1,2,3,4];
+  var result = where<int>(numbers, (x) => x % 2 == 1); 
+  print(result);
+}
+
+List<T> where<T> (List<T> values, bool Function(T) equation){
+  var result = <T>[];
+for(var value in values){
+  if (equation(value)) 
+    result.add(value);
+}
+  return result; 
+}
+
+ ```
+
+ ### firstWhere function exercise
+
+ In this exercise, I created a firstWhere function from scratch with generic types. The firstWhere function runs the equation function on every value in my list. It then returns value. Else, the firstWhere function returns the orElse function. 
+
+ ```dart
+var result2 = firstWhere(numbers, (x) => x == 5, orElse: () => -1);
+print(result2);
+
+T firstWhere<T> (List<T> values, bool Function(T) equation, {required T Function() orElse}){
+ 
+  for(var value in values){
+    if (equation(value)){
+       return value;
+      } 
+  }  
+  return orElse();
+}
+
+ ```
