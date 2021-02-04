@@ -65,3 +65,45 @@ const Complex(this.re, this.im);
 final double im;
 }
 ```
+
+## Named Constructor
+
+A named constructor is a constructor with a name. For example,
+`Complex.zero()` is a named constructor. The named
+constructor can initialize different variables
+and take in different parameters. This allows for
+the named constructor to be more unique and
+specialized compared to a regular constructor.
+
+```dart
+Complex.zero() : re = 0, im = 0;
+ final double re;
+final double im;
+...main(){
+    final zero = Complex.zero();
+```
+
+This is an example of a named constructor
+with a parameter and initializer.
+
+```dart
+Complex.real(this.re) : im = 0;
+...main(){
+    final real = Complex.real(3);
+```
+
+## Getter
+
+The getter method gets a value. The
+benefit of using a getter is that
+you don't have to put round parenthesis
+around the name of the value.
+
+```dart
+double get fahrenheit => celsius * 1.8 + 32;
+
+...main(){
+   print(temp.fahrenheit); 
+```
+
+## Setter
