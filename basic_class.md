@@ -106,4 +106,54 @@ double get fahrenheit => celsius * 1.8 + 32;
    print(temp.fahrenheit); 
 ```
 
+In the class called Restaurant, I created a getter function called totalRatings
+to return the length of a list called ratings. The purpose of a getter function
+is to get values.
+
+```dart
+class Restaurant{
+ ...
+  int get totalRatings {
+    return ratings.length;
+  }
+}
+
+void main(){
+var restaurant1 = Restaurant(name: 'Pizza', cuisine: 'Italian', 
+ratings: [4.4, 3.3, 5.0]);
+  print(restaurant1.totalRatings);
+ }
+```
+
 ## Setter
+
+The setter method sets a value and is called through
+an assignment in the main method.
+
+```dart
+set fahrenheit(double fahrenheit) => celsius = (fahrenheit - 32) / 1.8;
+
+...main(){
+temp.fahrenheit = 90;
+```
+
+## Static
+
+Static variables/methods should be used when they are specific to a class.
+The static const is a global constant that should belong to a class.
+When I use the static variables in the main() method,
+I don't have to instantiate the class.
+
+```dart
+class Strings {
+static const welcome = 'Welcome';
+  static const signIn = 'Sign in';
+  static String greet(String name) => 'Hi, $name';
+}
+
+void main() {
+print(Strings.welcome);
+  print(Strings.signIn);
+  print(Strings.greet('Apple'));
+}
+```
