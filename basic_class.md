@@ -157,3 +157,18 @@ print(Strings.welcome);
   print(Strings.greet('Apple'));
 }
 ```
+
+## Private variables
+
+To make a variable private, you must add a `_` to the variable name.
+This ensures that you can't access the private variable from a different class.
+However, if you assign the private stored variable to a public getter variable,
+then you can call the public getter variable in a different class.
+
+```dart
+class BankAccount {
+  BankAccount(this._balance);
+  double _balance;
+
+  double get balance => _balance;}
+```
