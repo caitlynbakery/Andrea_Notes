@@ -15,3 +15,7 @@
 * [Basic Functions](basic_functions.md)
 
 * [Advanced Functions](advanced_functions.md)
+
+* [Basic Classes](basic_class.md)
+
+* [Advanced Classes](advanced_classes.md)
