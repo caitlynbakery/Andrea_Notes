@@ -82,8 +82,9 @@ print('sleep some more');
 
 ## abstract classes
 
-Abstract classes are classes that
-can be implemented by subclasses. The abstract class is
+Abstract classes are classes that are classes that
+cannot be instantiated. They are implemented
+ by subclasses. The abstract class is
 very powerful because it separates the code interface
 and implementation. What this means is that when we can call a
 method `printArea()`, we don't have to
@@ -116,4 +117,51 @@ final Shape circle = Circle(6);
   printArea(circle);
 }
  
+```
+
+## Differences between implements & extends
+
+### multiple class inheritance
+
+An important difference between `implements` and `extends`
+is that `implements` can inherit multiple classes, while
+`extends` can only inherit one class.
+
+```dart
+abstract class InterfaceA {
+  void a();
+}
+
+abstract class InterfaceB {
+  void b();
+}
+
+class AB implements InterfaceA, InterfaceB {
+  @override 
+  void a(){
+  }
+  @override 
+  void b(){
+  }
+}
+```
+
+### override requirement
+
+Another difference is that when you implement a method
+inside of an abstract class, you don't have to override
+it in the subclass. However, if a method is not
+implemented in the abstract class, then it is an abstract
+method and needs to be overriden.
+
+```dart
+abstract class Base {
+  void foo();
+  void bar() => print('bar');
+}
+
+class Subclass extends Base {
+  @override 
+  void foo() => print('foo');
+}
 ```

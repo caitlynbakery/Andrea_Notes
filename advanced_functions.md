@@ -18,7 +18,8 @@ final sayHi = (String name) => 'Hi, $name';
 
 ## Function Types
 
-A type is part of the function call. You can pass in arguments. The type is typedef and it is easy to implement.
+A type is part of the function call. You can pass in arguments. The type is typedef
+ and it is easy to implement.
 
 ```dart
 typedef Greet = String Function(String);
