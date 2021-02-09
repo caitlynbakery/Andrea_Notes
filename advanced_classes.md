@@ -188,3 +188,45 @@ class Subclass implements Base {
 }
 
 ```
+
+## toString
+
+Sometimes when we want to print the contents of a class,
+the code shows an instance of the class. To solve this problem,
+you can override the toString method inside of the parent class
+to print information that's more useful to the programmer.
+
+This is the problem. The message instance of point is not helpful.
+
+```dart
+class Point {
+  const Point(this.x, this.y);
+  final int x;
+  final int y;}
+
+  void main(){
+  print(Point(1,1));}
+...
+...
+Instance of 'Point'
+```
+
+This is the solution. Overriding the toString() provides helpful
+information.
+
+```dart
+class Point {
+  const Point(this.x, this.y);
+  final int x;
+  final int y;
+
+  @override
+  String toString() => 'Point($x, $y)';
+}
+
+void main(){
+  print(Point(1,1));}
+...
+...
+Point(1, 1)
+```
