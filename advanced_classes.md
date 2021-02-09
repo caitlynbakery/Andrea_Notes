@@ -121,6 +121,8 @@ final Shape circle = Circle(6);
 
 ## Differences between implements & extends
 
+<img src="images/extends.png" width=60%>
+
 ### multiple class inheritance
 
 An important difference between `implements` and `extends`
@@ -148,10 +150,10 @@ class AB implements InterfaceA, InterfaceB {
 
 ### override requirement
 
-Another difference is that when you implement a method
+Another difference is that when you assign a method
 inside of an abstract class, you don't have to override
-it in the subclass. However, if a method is not
-implemented in the abstract class, then it is an abstract
+it in the subclass if it uses `extends`. However, if a method is not
+assigned in the abstract class, then it is an abstract
 method and needs to be overriden.
 
 ```dart
@@ -164,4 +166,25 @@ class Subclass extends Base {
   @override 
   void foo() => print('foo');
 }
+```
+
+Contrastly, when I use the `implements` to inherit an abstract class,
+I need to declare both of the functions in the subclass. Even if 
+the function was assigned in the parent class, I still need to
+declare it in the subclass.
+
+```dart
+abstract class Base {
+  void foo();
+  void bar() => print('bar');
+}
+
+class Subclass implements Base {
+  @override 
+  void foo() => print('foo');
+
+  @override 
+  void bar() => print('bar');
+}
+
 ```
