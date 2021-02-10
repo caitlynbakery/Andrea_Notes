@@ -230,3 +230,61 @@ void main(){
 ...
 Point(1, 1)
 ```
+
+## equality
+
+When I try to compare two instances of Dart,
+the program throws an error
+because Dart doesn't know how to. The solution is to use the
+equality operator.
+
+problem:
+
+```dart
+print(Point(0,0) == Point(0,0));
+```
+
+In the example above, the `==` sign returns false. To make it
+return true, you can override the `==`. Here's how to do it.
+
+On the left of the `==` put the name `operator` and a boolean type.
+The `operator` is a special keyword for the various operators in
+Dart.
+On the right of the `==` put the arguments of type Point.
+
+The equality operator overrides the equality operation and the argument is of type
+Point. It is passed both an x and y value.  
+
+The covariant keyword changes the type of an argument when
+overriding a method and throws an error if the argument
+is not the correct type at compile time.
+
+```dart
+ @override 
+  bool operator ==(covariant Point other) {
+ 
+      return x == other.x && y == other.y;
+  }
+```
+
+## implement '+' and '*' operator
+
+We can implement different types of operator such as
+`*` and `+`. The `+` operator returns a Point that adds
+the two values together. The `*` operator returns a point that
+multiplies the x and y values by the integer.
+
+```dart
+ Point operator +(Point other){
+    return Point(x+other.x, y+other.y);
+  }
+
+  Point operator *(int other){
+    return Point(x * other, y * other);
+  }
+
+  void main(){
+  print(Point(1,1) + Point(2,0));
+  print(Point(2,1) * 5);
+  }
+```
