@@ -2,12 +2,12 @@
 
 ## What I will learn
 
-1) Create Classes
-2) Constructors
-3) Member variables & methods
-4) Getters & Setters
-5) Static keyuword
-6) making things private
+1. Create Classes
+2. Constructors
+3. Member variables & methods
+4. Getters & Setters
+5. Static keyuword
+6. making things private
 
 ## Constructors
 

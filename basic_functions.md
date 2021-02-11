@@ -76,4 +76,5 @@ void main() {
 }
 ```
 
-In the example above, the global variable counter is being modified which we should avoid. 
+In the example above, the global variable counter
+is being modified which we should avoid.
