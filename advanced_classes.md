@@ -288,3 +288,67 @@ multiplies the x and y values by the integer.
   print(Point(2,1) * 5);
   }
 ```
+
+## hashcode
+
+Two objects that are equal should have the same
+hashcode and non-equal objects should have
+different hashcodes. We should always override
+the hashcode when we override `==`. We
+use the `equatable` package from pub.dev to help with hashcodes.
+The equatable takes care of overriding hashcodes using a list.
+It also overrides the `==` operator.
+
+### How to use equatable
+
+1. Install it in pubspec.yaml
+2. Import the package
+3. Add extends Equatable to our classes
+4. Override props variable
+5. Override stringify and return true(replaces toString())
+
+```dart
+class Point extends Equatable{
+  ...
+@override
+  List<Object> get props => [x,y];
+
+  @override
+  bool get stringify => true;
+}
+```
+
+Equatable should only be used with immutable classes!
+Immutable classes are classes that have final variables
+and are not altered.
+
+## generics
+
+generics are used to create more reusuable code. They
+are very common with functional operators(map, where, reduce).
+An example of a generic class is the Stack class. The Stack class
+can push or pop items to a list. We can create the Stack to be of
+generic type so that when we call it in `main`, the Stack can be
+integers or Strings.
+
+```dart
+class Stack<T> {
+  final List<T> _items = [];
+
+  void push(T item) => _items.add(item);
+
+  T pop() => _items.removeLast();
+}
+
+void main(){
+  final stack = Stack<int>();
+    stack.push(1);
+    final names = Stack<String>();
+    names.push('Andrea');
+}
+```
+
+## composition vs inheritance
+
+A Stack has a List which would be composition. Inheritance
+is when a Square is a Shape.
