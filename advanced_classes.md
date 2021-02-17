@@ -352,3 +352,64 @@ void main(){
 
 A Stack has a List which would be composition. Inheritance
 is when a Square is a Shape.
+
+Inheritance is a `Is A` relationship. For example, a `Dog` class
+is a `Animal` class.
+
+Composition is a `Has A` relationship. For example, a `Superbot`
+class has `move`, `clean`,  and `bark` features.
+
+We should prefer composition because the relationships can get
+confusing.
+
+Here's an example of composition in python.
+
+```python
+
+class Robot():
+  def move(self):
+    print('moving')
+
+class CleanRobot():
+  def clean(self):
+    print('I have dust')
+
+class Dog():
+  def bark(self):
+    print('Bark!')
+
+class Superbot():
+  def __init__(self):
+    self.o1 = Robot()
+    self.o2 = Dog()
+    self.o3 = CleanRobot()
+
+  def playGame(self):
+    print('chess')
+  
+  def move(self):
+    return self.o1.move()
+  
+  def bark(self):
+    return self.o2.bark()
+
+  def clean(self):
+    return self.o3.clean() 
+
+
+henry = Superbot()
+henry.move() 
+henry.bark() 
+henry.playGame() 
+```
+
+## Factory constructors
+
+A common use case for factory constructors is to parse JSON data.
+
+Factory constructors are useful:
+
+1. Implement a constructor that doesn't always create a
+new instance of its class
+2. Initialize a final variable using logic that can't be handled
+in initializer list
