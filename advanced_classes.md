@@ -413,3 +413,22 @@ Factory constructors are useful:
 new instance of its class
 2. Initialize a final variable using logic that can't be handled
 in initializer list
+
+For example, I used the factory constructor for my Shape class
+to parse JSON data. The Shape constructor does not need to be
+instantiated in the main method and creates a final variable with
+a switch statement. The switch statment is pretty complex for the
+final variable which is why I don't create an initializer list.
+
+```dart
+  factory Shape.fromJson(Map<String, Object> json){
+    final type = json['type'];
+    switch(type){
+      case 'square':
+        final side = json['side'];
+        if(side is double) {
+          return Square(side);
+        }
+       throw UnsupportedError('invalid or missing side property');
+    }}
+```
