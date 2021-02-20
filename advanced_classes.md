@@ -432,3 +432,19 @@ final variable which is why I don't create an initializer list.
        throw UnsupportedError('invalid or missing side property');
     }}
 ```
+
+## copyWith method
+
+The copyWith method takes in parameters and returns
+a new `Credentials` that copies the previous parameters. With
+the copyWith method I can pass in different email and password
+values, even though they are final variables.
+
+```dart
+ Credentials copyWith({
+    String? email,
+    String? password,
+  }) {
+    return Credentials(email: email ?? this.email, password: password ?? this.password);
+  }
+```
