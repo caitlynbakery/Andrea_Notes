@@ -448,3 +448,18 @@ values, even though they are final variables.
     return Credentials(email: email ?? this.email, password: password ?? this.password);
   }
 ```
+
+## cascade method
+
+The cascade syntax chains items together in sequential steps.
+For example, the `moveTo` and `lineTo` methods are chained to the
+`path` object.
+
+```dart
+ final path = ClosedPath()
+    ..moveTo(Point(0, 0))
+    ..lineTo(Point(2,0))
+    ..lineTo(Point(2,2))
+    ..lineTo(Point(0,2))
+    ..lineTo(Point(0,0));
+```
